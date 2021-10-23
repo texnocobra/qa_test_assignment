@@ -14,12 +14,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 @ExtendWith(Listener.class)
 @Execution(ExecutionMode.CONCURRENT)
-public class Selenide extends BaseTest {
+public class SelenideTest extends BaseTest {
 
     @Test
     public void test(){
         open("https://google.com/");
-        $x("//input[@name = 'q']").setValue("ChromeDriver").pressEnter();
+        $x("//input[@name = 'qs']").setValue("ChromeDriver").pressEnter();
         $x("//div[@id = 'result-stats']").shouldBe(Condition.visible);
 
     }

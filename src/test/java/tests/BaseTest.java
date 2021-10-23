@@ -25,17 +25,11 @@ public class BaseTest {
             for (File item : Objects.requireNonNull(allureResults.listFiles()))
                 item.delete();
         }
-        if (CLEAR_REPORTS_DIR) {
-            File allureScreenshots = new File("build/reports/tests/");
-            for (File item : Objects.requireNonNull(allureScreenshots.listFiles()))
-                item.delete();
-        }
-        if (CLEAR_REPORTS_DIR) {
+        if (Config.CLEAR_REPORTS_DIR) {
             File reports = new File("build/reports/tests/");
             if (reports.isDirectory()) {
-                for (File item : Objects.requireNonNull(reports.listFiles())) {
+                for (File item : Objects.requireNonNull(reports.listFiles()))
                     item.delete();
-                }
             }
             File downloads = new File("build/downloads/");
             if (downloads.isDirectory()) {
@@ -45,3 +39,4 @@ public class BaseTest {
         }
     }
 }
+
