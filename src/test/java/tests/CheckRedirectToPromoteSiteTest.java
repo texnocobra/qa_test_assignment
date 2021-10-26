@@ -11,13 +11,14 @@ import static testData.TestData.YANDEX_URL;
 
 @ExtendWith(Listener.class)
 @Execution(ExecutionMode.CONCURRENT)
-public class CheckResultOnNextPage extends BaseTest {
+public class CheckRedirectToPromoteSiteTest extends BaseTest {
 
     @Test
-    public void goToTheNextResultPage() {
+    public void checkRedirectToPromoteWebSite() {
         basePage.goToURL(YANDEX_URL);
         basePage.fillSearchInput(SEARCH_REQUEST);
         basePage.doSearch();
-        resultPage.goToTheNextPageAndCheckResults();
+        resultPage.goToPromoteWebSite();
+
     }
 }

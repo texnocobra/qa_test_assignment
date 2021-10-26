@@ -1,9 +1,6 @@
 package pages;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -34,4 +31,5 @@ public class BasePage {
         List<String> listHints = SEARCH_HINT_ITEMS.texts();
         SEARCH_HINT_ITEMS.shouldBe(CollectionCondition.texts(listHints));
     }
+
 }
