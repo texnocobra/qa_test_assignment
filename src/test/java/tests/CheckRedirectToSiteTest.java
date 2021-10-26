@@ -15,10 +15,10 @@ public class CheckRedirectToSiteTest extends BaseTest {
 
     @Test
     public void checkRedirectToWebSite() {
-        basePage.goToURL(YANDEX_URL);
-        basePage.fillSearchInput(SEARCH_REQUEST);
-        basePage.doSearch();
+        basePage
+                .goToURL(YANDEX_URL)
+                .fillSearchInput(SEARCH_REQUEST)
+                .searching();
         resultPage.goToWebSite();
-
     }
 }

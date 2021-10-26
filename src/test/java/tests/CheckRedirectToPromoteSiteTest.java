@@ -15,10 +15,9 @@ public class CheckRedirectToPromoteSiteTest extends BaseTest {
 
     @Test
     public void checkRedirectToPromoteWebSite() {
-        basePage.goToURL(YANDEX_URL);
-        basePage.fillSearchInput(SEARCH_REQUEST);
-        basePage.doSearch();
+        basePage.goToURL(YANDEX_URL)
+                .fillSearchInput(SEARCH_REQUEST)
+                .searching();
         resultPage.goToPromoteWebSite();
-
     }
 }

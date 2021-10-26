@@ -17,21 +17,29 @@ public class BasePage {
             "[contains(text (), 'propellerads')]"));
     private final SelenideElement searchButton = $(byXpath("//button[@type='submit']"));
 
-    public void goToURL(String url) {
+    public BasePage goToURL(String url) {
         open(url);
+
+        return this;
     }
 
-    public void doSearch() {
+    public BasePage searching() {
         searchButton.click();
+
+        return this;
     }
 
-    public void fillSearchInput(String testrequest) {
+    public BasePage fillSearchInput(String testrequest) {
         searchInput.val(testrequest);
+
+        return this;
     }
 
-    public void checkRequestInHint() {
+    public BasePage checkRequestInHint() {
         searchHintItems.first().shouldBe(visible);
         List<String> listHints = searchHintItems.texts();
         searchHintItems.shouldBe(CollectionCondition.texts(listHints));
+
+        return this;
     }
 }

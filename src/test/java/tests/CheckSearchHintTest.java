@@ -11,13 +11,13 @@ import static testData.TestData.YANDEX_URL;
 
 @ExtendWith(Listener.class)
 @Execution(ExecutionMode.CONCURRENT)
-public class CheckSearchHintTest extends BaseTest{
+public class CheckSearchHintTest extends BaseTest {
 
     @Test
-    public void checkSearchHintContainsRequest(){
-        basePage.goToURL(YANDEX_URL);
-        basePage.fillSearchInput(SEARCH_REQUEST);
+    public void checkSearchHintContainsRequest() {
+        basePage
+                .goToURL(YANDEX_URL)
+                .fillSearchInput(SEARCH_REQUEST);
         basePage.checkRequestInHint();
-
     }
 }

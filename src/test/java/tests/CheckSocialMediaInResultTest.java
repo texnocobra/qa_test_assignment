@@ -14,10 +14,11 @@ import static testData.TestData.YANDEX_URL;
 public class CheckSocialMediaInResultTest extends BaseTest {
 
     @Test
-    public void checkSocialMediaInSearchResult(){
-        basePage.goToURL(YANDEX_URL);
-        basePage.fillSearchInput(SEARCH_REQUEST);
-        basePage.doSearch();
+    public void checkSocialMediaInSearchResult() {
+        basePage
+                .goToURL(YANDEX_URL)
+                .fillSearchInput(SEARCH_REQUEST)
+                .searching();
         resultPage.checkSocialMediaInSearchResult();
     }
 }
