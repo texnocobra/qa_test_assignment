@@ -34,6 +34,7 @@ public class BaseTest {
             File downloads = new File("build/downloads/");
             if (downloads.isDirectory()) {
                 for (File item : Objects.requireNonNull(reports.listFiles())) {
+                    item.delete();
                 }
             }
         }
