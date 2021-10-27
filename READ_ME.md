@@ -7,8 +7,9 @@ Test assignment for QA-Engineer position for propellerads
    4) Selenide
    5) Allure
 2) To run the tests perform: 
+
 ![img.png](img.png)
-3) To generate a report and view the results run:
+4) To generate a report and view the results run:
 
 
     mvn allure:serve
