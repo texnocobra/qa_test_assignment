@@ -1,6 +1,8 @@
 package tests;
 
 import common.Listener;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.parallel.Execution;
@@ -11,6 +13,8 @@ import static testData.TestData.YANDEX_URL;
 
 @ExtendWith(Listener.class)
 @Execution(ExecutionMode.CONCURRENT)
+@Feature("Test to checks that the search query is contained in the following search page")
+@Story("A positive scenario")
 public class CheckResultOnNextPage extends BaseTest {
 
     @Test
